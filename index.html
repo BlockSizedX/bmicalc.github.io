@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="input-container">
+            <div class="input">
+                <p>Weight</p>
+                <input type="text" name="weight" id="weight" placeholder="weight in kg">
+            </div>
+            <div class="input">
+                <p>Height</p>
+                <input type="text" name="height" id="height" placeholder="height in meter">
+            </div>
+        </div>
+        <button id="sub_btn">Calculate BMI</button>
+        <p class="shower" id="shower">Your BMI is 100</p>
+        <p class="footer">BMI CAlculator. made by Nazal</p>
+    </div>
+    <script>
+        const sub_btn = document.getElementById('sub_btn');
+        const we = document.getElementById('weight');
+        const he = document.getElementById('height');
+        const ou = document.getElementById('shower');
+
+        let w = 0;
+        let h = 0;
+        let bmi = 0;
+
+        function calc() {
+            w = we.value;
+            h = he.value;
+            bmi = w/(h*h)
+            return bmi;
+        }
+
+        sub_btn.addEventListener('click', () => {
+            if (we.value == 0 || he.value == 0) {
+                alert("Enter both Height and Weight");
+            } else if (we.value <= 10 || he.value >=10) {
+                alert("Enter height in Meter and weight in KG")
+            } else {
+                ou.innerText = `Your BMI is: ${calc()}`
+            }
+            
+        })
+        
+    </script>
+</body>
+</html>
