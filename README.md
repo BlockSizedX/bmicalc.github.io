@@ -9,7 +9,7 @@ The core objective was to demonstrate that essential utility tools do not requir
 The application is designed with a focus on precision and user feedback.
 
 *   **Real-Time Data Processing:** The JavaScript engine calculates the BMI immediately upon user input, providing a seamless experience without page reloads.
-*   **Dynamic Health Classification:** The tool does more than provide a raw number. It compares the result against the World Health Organization (WHO) standards to categorize the user into Underweight, Normal Weight, Overweight, or Obese classes.
+*   **Dynamic Health Classification:** The tool does more than provide a raw number. It compares the result against the World Health Organization (WHO) standards to categorize the user into Underweight, Normal Weight or Overweight
 *   **Accessibility and UI Design:** The interface was built with a mobile-first approach. The layout adapts to various screen sizes, ensuring that the input fields and result displays remain legible on small mobile devices and large desktop monitors alike.
 
 ### Technical Implementation and Learning Objectives

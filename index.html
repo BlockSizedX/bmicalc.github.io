@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1130759393.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main-container">
@@ -18,9 +19,14 @@
             </div>
         </div>
         <button id="sub_btn">Calculate BMI</button>
-        <p class="shower" id="shower">Your BMI is 100</p>
+        <p class="shower" id="shower">Enter Height and Weight</p>
         <p class="footer">BMI CAlculator. made by Nazal</p>
+        
+
     </div>
+    <a href="https://github.com/BlockSizedX">
+        <i class="fa-brands fa-github"></i>
+    </a>
     <script>
         const sub_btn = document.getElementById('sub_btn');
         const we = document.getElementById('weight');
@@ -42,9 +48,22 @@
             if (we.value == 0 || he.value == 0) {
                 alert("Enter both Height and Weight");
             } else if (we.value <= 10 || he.value >=10) {
-                alert("Enter height in Meter and weight in KG")
+                alert("Enter height in Meter and weight in KG");
             } else {
-                ou.innerText = `Your BMI is: ${calc()}`
+                if (calc() <= 18.4) {
+                    ou.innerText = `Your BMI is: ${calc()}
+                    Under Weight`;
+                    ou.style.backgroundColor = 'rgba(255, 0, 0, 0.4)';
+                } else if (calc() >= 24.91) {
+                    ou.innerText = `Your BMI is: ${calc()}
+                    Over Weight`;
+                    ou.style.backgroundColor = 'rgba(255, 0, 0, 0.4)';
+                } else {
+                    ou.innerText = `Your BMI is: ${calc()}
+                    Normal Weight`;
+                    ou.style.backgroundColor = 'rgba(0, 128, 0, 0.519)'
+                }
+                
             }
             
         })
